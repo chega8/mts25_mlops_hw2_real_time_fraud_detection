@@ -1,0 +1,101 @@
+transaction_time,merch,cat_id,amount,name_1,name_2,gender,street,one_city,us_state,post_code,lat,lon,population_city,jobs,merchant_lat,merchant_lon
+2019-01-25 22:45,fraud_Torphy-Goyette,shopping_pos,1172.01,Ryan,Anderson,M,254 Webster Harbor,Waukau,WI,54980,43.9886,-88.7712,149,"Engineer, building services",43.040053,-89.274051
+2019-03-22 22:12,"fraud_Stanton, Jakubowski and Baumbach",shopping_net,977.1,Bradley,Adkins,M,362 Brown Wall,Kaktovik,AK,99747,66.6933,-153.994,239,Careers information officer,66.115234,-154.790455
+2019-03-22 22:53,"fraud_Altenwerth, Cartwright and Koss",shopping_net,1099.67,Bradley,Adkins,M,362 Brown Wall,Kaktovik,AK,99747,66.6933,-153.994,239,Careers information officer,67.510267,-153.069184
+2019-01-31 22:07,fraud_Kerluke-Abshire,shopping_net,1084.55,Mark,Pennington,M,4940 Donald Throughway Apt. 219,Vacaville,CA,95688,38.3847,-121.9887,99475,Clinical cytogeneticist,38.962408,-121.301792
+2019-02-25 22:25,fraud_Boyer PLC,shopping_net,1078.92,Chelsea,Silva,F,5205 Annette Islands Apt. 043,Hubbell,NE,68375,40.0456,-97.4735,121,Set designer,40.281654,-97.399513
+2019-02-25 23:25,"fraud_Little, Gutmann and Lynch",shopping_net,996.11,Chelsea,Silva,F,5205 Annette Islands Apt. 043,Hubbell,NE,68375,40.0456,-97.4735,121,Set designer,40.540097,-96.514041
+2019-10-20 23:37,fraud_Corwin-Gorczany,misc_net,875.86,Benjamin,Beck,M,994 Grant Mall,Irvington,NY,10533,41.0381,-73.8597,7322,Air traffic controller,40.22984,-74.130332
+2019-09-09 23:18,fraud_Botsford Ltd,shopping_pos,976.48,Austin,Phillips,M,89871 Woodard Spring Suite 714,Mineral,VA,23117,37.9986,-77.8781,9141,Personnel officer,37.707299,-77.804585
+2019-02-12 22:22,"fraud_Parisian, Schiller and Altenwerth",misc_net,800.9,Rachel,Johnson,F,7065 Whitney Mountains,Chattanooga,TN,37411,35.0271,-85.2356,198659,Contracting civil engineer,34.110289,-86.211018
+2019-09-09 22:22,fraud_Schmitt Ltd,misc_net,750.82,Austin,Phillips,M,89871 Woodard Spring Suite 714,Mineral,VA,23117,37.9986,-77.8781,9141,Personnel officer,38.147333,-78.00732
+2019-10-20 22:48,"fraud_Heathcote, Yost and Kertzmann",shopping_net,1018.86,Benjamin,Beck,M,994 Grant Mall,Irvington,NY,10533,41.0381,-73.8597,7322,Air traffic controller,40.339684,-73.69239
+2019-03-22 23:58,fraud_Kozey-Boehm,shopping_net,1143.67,Brian,Ray,M,055 Stephanie Turnpike Suite 559,Walkertown,NC,27051,36.18,-80.1629,7369,TEFL teacher,36.418406,-79.487014
+2019-12-07 23:48,fraud_Flatley-Durgan,misc_net,680.0,Kelly,Lawrence,F,5124 Wendy Skyway Suite 154,Karns City,PA,16041,41.0022,-79.716,1888,Ship broker,40.670829,-79.911629
+2019-08-09 23:37,fraud_Pouros-Haag,shopping_pos,928.93,Calvin,Molina,M,046 Michelle Fort Suite 314,Medford,NY,11763,40.8174,-72.9852,28506,Forest/woodland manager,40.642427,-73.490192
+2019-02-07 23:17,"fraud_Rodriguez, Yost and Jenkins",misc_net,768.0,Lisa,Carpenter,F,48437 English Ways Suite 579,La Grande,OR,97850,45.3304,-118.0852,16955,"Engineer, site",45.224147,-118.552234
+2019-02-12 22:16,fraud_Ruecker Group,misc_net,865.3,Rachel,Johnson,F,7065 Whitney Mountains,Chattanooga,TN,37411,35.0271,-85.2356,198659,Contracting civil engineer,34.336842,-85.788578
+2019-02-07 22:17,fraud_Rempel Inc,shopping_net,942.0,Lisa,Carpenter,F,48437 English Ways Suite 579,La Grande,OR,97850,45.3304,-118.0852,16955,"Engineer, site",44.4009,-118.984081
+2019-10-19 23:45,"fraud_Altenwerth, Cartwright and Koss",shopping_net,1091.61,Benjamin,Beck,M,994 Grant Mall,Irvington,NY,10533,41.0381,-73.8597,7322,Air traffic controller,40.619197,-74.626533
+2019-09-09 22:49,fraud_Schumm PLC,shopping_net,970.36,Austin,Phillips,M,89871 Woodard Spring Suite 714,Mineral,VA,23117,37.9986,-77.8781,9141,Personnel officer,37.813031,-78.827451
+2019-02-07 23:44,fraud_Kerluke-Abshire,shopping_net,1096.03,Lisa,Carpenter,F,48437 English Ways Suite 579,La Grande,OR,97850,45.3304,-118.0852,16955,"Engineer, site",46.306316,-118.697593
+2019-12-26 16:51,fraud_Treutel-King,travel,174.52,Sara,Ramirez,F,23843 Scott Island,Birmingham,IA,52535,40.8626,-91.9534,888,Camera operator,41.475051,-92.111355
+2019-03-03 12:06,"fraud_Ritchie, Bradtke and Stiedemann",travel,173.7,Nicholas,Mcmahon,M,2123 Jonathan Falls Suite 753,Heiskell,TN,37754,36.115,-84.0438,4729,"Geologist, wellsite",35.713683,-84.921548
+2019-09-01 12:30,"fraud_Hodkiewicz, Prohaska and Paucek",travel,161.26,Jose,Vasquez,M,572 Davis Mountains,Lake Jackson,TX,77566,29.0393,-95.4401,28739,Futures trader,28.553274,-96.316572
+2019-09-08 16:39,"fraud_Ritchie, Oberbrunner and Cremin",travel,215.82,Dustin,Roberts,M,3283 James Station,Fayetteville,NC,28314,35.0583,-79.008,238602,"Scientist, research (maths)",34.178298,-78.063364
+2020-02-16 12:03,fraud_Kessler Inc,travel,174.16,Justin,Bell,M,5323 Walker Island,Pittsburgh,PA,15217,40.4308,-79.9205,687276,"Scientist, marine",41.219235,-80.632184
+2020-01-06 20:48,fraud_Tillman LLC,travel,177.34,Mary,Schmidt,F,022 Moore Island,New York City,NY,10162,40.7699,-73.9511,1577385,Audiological scientist,40.809925,-73.662139
+2019-11-03 13:44,fraud_Leannon-Nikolaus,travel,232.67,Kristen,Hanson,F,26544 Andrea Glen,Goodrich,MI,48438,42.9147,-83.4845,6951,Learning disability nurse,42.340541,-84.194739
+2019-11-27 15:55,fraud_Satterfield-Lowe,travel,172.56,Shelby,Mitchell,F,974 Cindy Stream,Brandon,VT,5733,43.8065,-73.0882,5895,"Scientist, marine",43.114946,-72.160661
+2019-05-28 12:37,"fraud_Hartmann, Rowe and Hermann",travel,209.03,Mackenzie,Smith,F,7178 Willis Drive,Hooper,NE,68031,41.6414,-96.5232,1745,"Engineer, automotive",41.370906,-96.910719
+2019-02-11 20:06,fraud_Veum-Koelpin,travel,170.67,David,Rodriguez,M,821 Solis Points,Muskegon,MI,49440,43.2326,-86.2492,128715,Historic buildings inspector/conservation officer,42.883957,-85.289254
+2019-08-11 15:43,fraud_Ebert-Daugherty,travel,204.78,Natasha,Mclaughlin,F,8699 Lindsay Ford Apt. 486,Napa,CA,94558,38.4549,-122.2564,94014,Airline pilot,39.02277,-121.290556
+2020-01-04 18:29,"fraud_Quitzon, Green and Bashirian",shopping_pos,1.14,Sharon,Smith,F,17666 David Valleys,Sun City,CA,92585,33.7467,-117.1721,54287,"Designer, exhibition/display",34.674643,-118.060271
+2019-05-29 15:58,fraud_Goyette-Herzog,travel,177.37,Antonio,Koch,M,8738 Richard Brooks,Moab,UT,84532,38.5677,-109.5271,9772,Location manager,39.329697,-110.238849
+2020-01-19 13:44,fraud_Leannon-Nikolaus,travel,131.24,Sarah,Clark,F,25961 Beverly Union Apt. 042,North Wilkesboro,NC,28659,36.2017,-81.1286,21134,Dispensing optician,36.062233,-80.364723
+2019-09-23 21:59,"fraud_Kunze, Larkin and Mayert",travel,222.36,Destiny,Lowe,F,79472 Stevens Trace Apt. 120,Hannawa Falls,NY,13647,44.6087,-74.9732,69,Chief Executive Officer,44.075332,-74.710267
+2019-06-29 16:17,fraud_Tillman LLC,travel,159.97,Zachary,Boone,M,3703 Benson Wells,Palmyra,NY,14522,43.0622,-77.2218,9565,Exhibition designer,42.073097,-77.758212
+2019-12-14 15:34,"fraud_Reichel, Bradtke and Blanda",travel,194.23,Margaret,Williams,F,165 Jerry Meadows Suite 460,Surrency,GA,31563,31.6489,-82.1982,1324,"Engineer, technical sales",31.695808,-82.948257
+2019-10-22 16:13,"fraud_Champlin, Rolfson and Connelly",travel,211.81,Edward,Sanchez,M,594 White Dale Suite 530,Malad City,ID,83252,42.1808,-112.262,4154,Nature conservation officer,42.411066,-111.781871
+2019-09-22 12:45,fraud_Block-Hauck,travel,151.43,Monique,Martin,F,68276 Matthew Springs,Ratcliff,TX,75858,31.3833,-95.0619,43,"Engineer, production",32.029498,-95.112884
+2019-12-12 12:24,fraud_Thiel Ltd,travel,225.25,Jessica,Bell,F,669 Moore Shoal,Bethel,OH,45106,38.9424,-84.092,12349,Field trials officer,39.312357,-84.151248
+2019-10-06 19:00,fraud_Bednar Inc,travel,144.38,Justin,Fowler,M,5569 Phillips Neck Apt. 003,Coffeeville,MS,38922,33.9215,-89.6782,3451,Financial trader,34.709772,-90.538523
+2019-08-26 17:15,fraud_Kessler Group,travel,129.64,Samuel,Farrell,M,428 Michael Tunnel Apt. 377,Cleveland,AL,35049,33.9778,-86.5598,3996,Aid worker,34.70089,-87.197897
+2019-12-12 20:18,fraud_Fritsch LLC,travel,160.01,Mary,Lewis,F,118 Justin Extension,Bay Minette,AL,36507,30.8635,-87.7644,19090,Science writer,30.2449,-87.396961
+2020-01-01 15:01,"fraud_Daugherty, Pouros and Beahan",shopping_pos,1.95,Margaret,Mendez,F,7952 Karen Pike,De Soto,KS,66018,38.9462,-94.9714,5760,Chief Executive Officer,38.98318,-95.918135
+2019-11-03 12:57,fraud_Bednar Inc,travel,153.04,Lauren,Anderson,F,11014 Chad Lake Apt. 573,Heart Butte,MT,59448,48.2777,-112.8456,743,Water engineer,49.044296,-112.396068
+2020-03-01 12:45,fraud_Turner LLC,travel,158.23,Kayla,Obrien,F,7921 Robert Port Suite 343,Prairie Hill,TX,76678,31.6591,-96.8094,263,Barrister,31.959917,-96.911133
+2019-12-01 12:20,fraud_Leannon-Nikolaus,travel,113.0,Robert,Flores,M,3277 Fields Meadows Apt. 790,Greenview,CA,96037,41.5403,-122.9366,308,Call centre manager,41.788848,-123.050947
+2019-09-15 20:18,fraud_Lemke and Sons,travel,251.32,Cody,Miller,M,25748 John Wells,Mooresville,NC,28117,35.584,-80.8685,69793,Control and instrumentation engineer,34.639022,-81.770715
+2019-02-25 21:48,fraud_Leannon-Nikolaus,travel,169.85,Renee,Walls,F,86542 Jessica Fords Apt. 706,Veedersburg,IN,47987,40.1186,-87.2602,4049,"Development worker, community",40.612387,-87.227971
+2019-07-06 18:20,"fraud_Haley, Jewess and Bechtelar",shopping_pos,1.14,Andrew,Mcgee,M,4130 Tiffany Glen Apt. 562,San Antonio,TX,78248,29.5894,-98.5201,1595797,Exhibition designer,30.300741,-98.888335
+2019-07-23 12:19,"fraud_Eichmann, Hayes and Treutel",travel,238.47,Sally,Moore,F,835 Reese Views Suite 884,Hopkins,SC,29061,33.9349,-80.8449,13717,Chiropodist,34.277328,-81.576633
+2019-05-13 16:11,fraud_Kozey-McDermott,travel,115.13,Jacqueline,Howard,F,4511 Choi Lock,Delhi,LA,71232,32.3929,-91.4714,6581,Multimedia programmer,31.586336,-91.362846
+2020-03-03 16:19,"fraud_Reichel, Bradtke and Blanda",travel,117.21,Robin,Smith,F,0537 Margaret Common Suite 526,Coleman,TX,76834,31.8287,-99.427,5908,Radio producer,32.804242,-98.992664
+2019-12-05 13:34,"fraud_Hodkiewicz, Prohaska and Paucek",travel,120.33,Lisa,Fitzpatrick,F,58761 Brewer Rapids,Skytop,PA,18357,41.2336,-75.2389,104,Financial trader,41.103234,-76.082931
+2020-01-04 12:41,fraud_Gerlach Inc,shopping_net,1.14,Ana,Howell,F,4664 Sanchez Common Suite 930,Bradley,SC,29819,34.0326,-82.2027,1523,Research scientist (physical sciences),33.876681,-82.848461
+2019-10-03 17:48,"fraud_Ritchie, Oberbrunner and Cremin",travel,256.72,Linda,Davis,F,6602 Ortiz Pine Apt. 179,Blooming Grove,TX,76626,32.0758,-96.701,1563,Financial adviser,31.442366,-97.319945
+2019-12-26 16:02,"fraud_Eichmann, Hayes and Treutel",travel,252.74,Eddie,Mendez,M,1831 Faith View Suite 653,Clarinda,IA,51632,40.7491,-95.038,7297,IT trainer,40.738395,-94.556487
+2020-01-16 14:34,"fraud_Ritchie, Bradtke and Stiedemann",travel,258.7,Charles,Robles,M,3337 Lisa Divide,Saint Petersburg,FL,33710,27.7898,-82.7243,341043,"Engineer, land",28.624204,-83.042431
+2019-08-07 21:17,"fraud_Monahan, Hermann and Johns",travel,234.82,Karen,Warren,F,4900 Curtis Gardens Suite 952,Hahira,GA,31632,30.9416,-83.3574,10295,"Teacher, special educational needs",31.355051,-83.039703
+2019-12-01 12:16,fraud_Lemke-Gutmann,shopping_net,2.95,Andrew,Mcgee,M,4130 Tiffany Glen Apt. 562,San Antonio,TX,78248,29.5894,-98.5201,1595797,Exhibition designer,28.627467,-99.450836
+2019-06-26 17:09,fraud_Corwin-Romaguera,travel,144.84,John,Myers,M,701 Wilson Divide,Highland,IN,46322,41.55,-87.4569,23727,Community arts worker,41.84046,-86.518512
+2019-07-02 12:52,fraud_Torphy-Goyette,shopping_pos,1.41,Gary,Martinez,M,03512 Jackson Ports,Reno,NV,89512,39.5483,-119.7957,276896,Immunologist,39.227934,-120.647561
+2019-08-29 15:10,"fraud_Hagenes, Hermann and Stroman",travel,141.36,Justin,Fowler,M,5569 Phillips Neck Apt. 003,Coffeeville,MS,38922,33.9215,-89.6782,3451,Financial trader,34.445702,-90.374324
+2019-06-17 18:13,fraud_Bednar Inc,travel,240.04,Mackenzie,Salazar,F,982 Melissa Lock,Bagley,WI,53801,42.9207,-91.0685,878,Risk analyst,42.394991,-90.773902
+2020-01-06 13:52,"fraud_Reichert, Shanahan and Hayes",shopping_net,1.13,Sara,Ramirez,F,23843 Scott Island,Birmingham,IA,52535,40.8626,-91.9534,888,Camera operator,41.105321,-92.234
+2019-03-01 20:52,fraud_Fritsch LLC,travel,228.13,Krystal,Gamble,F,47152 Clayton Burg,Manchester,MD,21102,39.6747,-76.8941,11751,Clinical research associate,38.752638,-77.429047
+2019-06-24 16:44,fraud_Corwin-Romaguera,travel,179.93,Patrick,Massey,M,7812 Shane Shoals Apt. 607,North Haverhill,NH,3774,44.0978,-72.0191,1966,Structural engineer,43.155072,-72.90603
+2019-11-15 12:02,"fraud_Kunze, Larkin and Mayert",travel,112.53,Tina,Zimmerman,F,3595 Susan Island Suite 063,Thomas,OK,73669,35.7382,-98.7388,1675,Barrister,34.876834,-98.417337
+2019-05-26 13:16,fraud_Treutel-King,travel,174.53,Jacqueline,Curry,F,3047 Jeff Place,Marathon,TX,79842,30.1886,-103.2214,498,Lexicographer,29.227897,-102.453634
+2019-03-02 16:30,fraud_Kris-Padberg,shopping_pos,1.09,Shelby,Mitchell,F,974 Cindy Stream,Brandon,VT,5733,43.8065,-73.0882,5895,"Scientist, marine",43.944091,-73.278573
+2020-01-12 13:50,fraud_Price Inc,shopping_net,1.1,Erin,Chavez,F,3379 Williams Common,Littleton,CO,80120,39.5994,-105.0044,320420,Water engineer,39.87054,-104.097715
+2019-01-05 13:47,"fraud_Haley, Jewess and Bechtelar",shopping_pos,1.09,Frank,Anderson,M,0611 Stafford Valley Suite 504,Naples,FL,34112,26.1184,-81.7361,276002,"Programme researcher, broadcasting/film/video",26.049202,-81.817209
+2019-11-02 14:13,"fraud_Baumbach, Strosin and Nicolas",shopping_pos,1.18,David,Rodriguez,M,821 Solis Points,Muskegon,MI,49440,43.2326,-86.2492,128715,Historic buildings inspector/conservation officer,44.206578,-86.302727
+2019-07-25 16:54,"fraud_Reichel, Bradtke and Blanda",travel,242.91,Steven,Faulkner,M,841 Cheryl Centers Suite 115,Farmington,NY,14425,42.958,-77.3083,10717,Cytogeneticist,43.09499,-77.458902
+2019-08-08 13:49,fraud_Schmidt and Sons,shopping_net,1.63,Andrew,Mcgee,M,4130 Tiffany Glen Apt. 562,San Antonio,TX,78248,29.5894,-98.5201,1595797,Exhibition designer,30.300727,-97.735063
+2020-02-01 12:08,"fraud_Douglas, Schneider and Turner",shopping_pos,1.07,Tara,Campbell,F,05050 Rogers Well Apt. 439,Rock Springs,WY,82901,41.606,-109.23,27971,Music therapist,41.077623,-109.887735
+2019-09-01 16:11,fraud_Predovic Inc,shopping_net,1.06,Gary,Martinez,M,03512 Jackson Ports,Reno,NV,89512,39.5483,-119.7957,276896,Immunologist,39.255779,-120.354052
+2019-07-09 12:03,"fraud_Bahringer, Schoen and Corkery",shopping_pos,2.35,Jodi,Rodriguez,F,5796 Lee Coves Apt. 286,Walnut Ridge,AR,72476,36.0244,-90.9288,7155,"Engineer, control and instrumentation",36.343967,-91.673817
+2019-07-14 13:17,fraud_Kris-Padberg,shopping_pos,1.1,Charles,Moreno,M,838 Franklin Prairie Apt. 902,Key West,FL,33040,24.6557,-81.3824,32891,Town planner,25.291045,-80.434744
+2020-02-21 18:01,fraud_Beier-Hyatt,shopping_pos,1.72,Rebecca,Erickson,F,594 Berry Lights Apt. 392,Wilmington,NC,28405,34.2651,-77.867,186140,English as a second language teacher,33.347358,-78.803874
+2020-01-04 14:34,fraud_Jast-McDermott,shopping_pos,2.97,Anna,Logan,F,3522 Park Wells Suite 528,Cleveland,TX,77327,30.33,-95.0202,34153,Building surveyor,29.396355,-94.037088
+2019-07-08 12:58,fraud_Hickle Group,shopping_pos,1.8,Jodi,Rodriguez,F,5796 Lee Coves Apt. 286,Walnut Ridge,AR,72476,36.0244,-90.9288,7155,"Engineer, control and instrumentation",35.339363,-91.560491
+2019-09-01 14:27,"fraud_Haley, Jewess and Bechtelar",shopping_pos,1.11,Chris,White,M,98897 Bennett Lodge,Bessemer,AL,35022,33.3224,-86.9657,71463,Radio broadcast assistant,34.167991,-87.213673
+2019-12-28 13:36,fraud_Turner and Sons,shopping_pos,1.15,Samuel,Johnston,M,16285 Jessica Lights,Birmingham,AL,35229,33.4629,-86.7904,493806,Musician,33.067477,-86.603402
+2019-12-02 12:41,"fraud_Kilback, Nitzsche and Leffler",travel,242.53,Katelyn,Wise,F,674 Maureen Summit Apt. 276,Scotts Mills,OR,97375,44.9897,-122.6187,1252,"Engineer, petroleum",44.966585,-123.076538
+2019-12-17 15:07,fraud_Turner and Sons,shopping_pos,1.4,Andrew,Mcgee,M,4130 Tiffany Glen Apt. 562,San Antonio,TX,78248,29.5894,-98.5201,1595797,Exhibition designer,29.965191,-98.597666
+2019-09-11 12:13,fraud_Mosciski Group,travel,109.83,Drew,Garcia,M,70858 Jasmine Meadows Apt. 135,Lima,OH,45801,40.7641,-84.0973,86954,"Copywriter, advertising",41.048699,-83.398622
+2020-01-25 12:14,"fraud_Schuppe, Nolan and Hoeger",shopping_pos,2.16,Jodi,Rodriguez,F,5796 Lee Coves Apt. 286,Walnut Ridge,AR,72476,36.0244,-90.9288,7155,"Engineer, control and instrumentation",36.984224,-91.657755
+2019-07-07 18:41,fraud_Hudson-Grady,shopping_pos,2.13,Jodi,Rodriguez,F,5796 Lee Coves Apt. 286,Walnut Ridge,AR,72476,36.0244,-90.9288,7155,"Engineer, control and instrumentation",36.091041,-90.994402
+2019-07-15 16:57,fraud_Block-Hauck,travel,118.05,Jason,Farmer,M,33165 Larry Walks Suite 960,Ragland,AL,35131,33.7367,-86.1619,4159,Educational psychologist,33.362652,-85.253573
+2019-07-10 18:20,"fraud_Bins, Balistreri and Beatty",shopping_pos,1.85,Samuel,Frey,M,830 Myers Plaza Apt. 384,Edmond,OK,73034,35.6665,-97.4798,116001,Media buyer,36.635168,-96.620348
+2020-01-01 20:21,fraud_Pfeffer and Sons,shopping_pos,1.15,Tyler,Mills,M,7838 Jason Squares,Elizabethtown,KY,42701,37.6848,-85.8784,48194,Surgeon,36.995484,-85.194481
+2019-08-02 18:08,fraud_Reichert-Weissnat,travel,257.78,Melody,Thompson,F,0362 Anderson Wall,Mound City,MO,64470,40.1362,-95.2138,1631,Architect,41.031314,-95.567234
+2019-12-02 12:35,"fraud_Goyette, Howell and Collier",shopping_pos,1.8,James,Cooper,M,663 Ramirez Trace Apt. 951,Huntsville,AL,35811,34.7789,-86.5438,190178,Television production assistant,34.948023,-86.695675
+2019-10-06 18:28,fraud_Little-Gleichner,travel,158.01,Phillip,Delacruz,M,26678 Lisa Locks Apt. 904,Iliff,CO,80736,40.7692,-103.0968,648,Community arts worker,40.53721,-103.905731
+2019-06-02 14:16,fraud_Dooley Inc,shopping_pos,1.59,Samuel,Johnston,M,16285 Jessica Lights,Birmingham,AL,35229,33.4629,-86.7904,493806,Musician,32.558166,-86.276698
+2020-01-03 15:34,fraud_Volkman-Predovic,shopping_net,1.02,Samuel,Johnston,M,16285 Jessica Lights,Birmingham,AL,35229,33.4629,-86.7904,493806,Musician,34.288462,-86.989256
+2019-05-04 12:13,fraud_Jacobi and Sons,shopping_pos,2.7,Dawn,Tucker,F,789 Herring Manors,Houston,TX,77007,29.7736,-95.4034,2906700,"Copywriter, advertising",28.811135,-94.580095
+2019-05-06 12:44,fraud_Kris-Padberg,shopping_pos,3.03,Anna,Logan,F,3522 Park Wells Suite 528,Cleveland,TX,77327,30.33,-95.0202,34153,Building surveyor,31.267899,-95.982976
+2019-01-08 12:01,"fraud_Douglas, Schneider and Turner",shopping_pos,1.28,Tammy,Ayers,F,1652 James Mews,Hinckley,OH,44233,41.2419,-81.7453,7646,Medical sales representative,40.867828,-81.449629

@@ -1,47 +1,33 @@
-import pandas as pd
-import logging
+import hashlib
+import json
+import os
+from pathlib import Path
 from catboost import CatBoostClassifier
+from fraud_detector.src.preprocessing import prepare_features, FEATURES, CATEGORIES, SCHEMA_VERSION
 
-# Настройка логгера
-logger = logging.getLogger(__name__)
+MODEL_DIR = Path(__file__).resolve().parents[1] / 'models'
 
-logger.info('Importing pretrained model...')
+class Scorer:
+    def __init__(self, model_dir=MODEL_DIR):
+        model_dir = Path(model_dir)
+        self.metadata = json.loads((model_dir / 'metadata.json').read_text())
+        path = model_dir / 'my_catboost.cbm'
+        if (self.metadata['features'] != FEATURES or self.metadata['categories'] != CATEGORIES
+            or self.metadata['schema_version'] != SCHEMA_VERSION
+            or self.metadata['model_sha256'] != hashlib.sha256(path.read_bytes()).hexdigest()):
+            raise ValueError('Model and preprocessing artifacts do not match')
+        self.model = CatBoostClassifier()
+        self.model.load_model(str(path))
+        if self.model.feature_names_ != FEATURES or list(self.model.classes_) != [0,1]:
+            raise ValueError('Invalid model features/classes')
+        self.threshold = float(os.getenv('FRAUD_THRESHOLD') or self.metadata['threshold'])
+        if not 0 <= self.threshold <= 1:
+            raise ValueError('Invalid FRAUD_THRESHOLD')
 
-# Import model
-model = CatBoostClassifier()
-model.load_model('./models/my_catboost.cbm')
-
-# Define optimal threshold
-model_th = 0.98
-logger.info('Pretrained model imported successfully...')
-
-
-def make_pred(dt, source_info="kafka"):
-
-    print(dt.dtypes)
-
-    # Меняем формат категориальных фичей на string перед скорингом
-    expected_categorical = ['hour',
-                            'year',
-                            'month',
-                            'day_of_month',
-                            'day_of_week',
-                            'gender_cat',
-                            'merch_cat',
-                            'cat_id_cat',
-                            'one_city_cat',
-                            'us_state_cat',
-                            'jobs_cat']
-    for col in expected_categorical:
-        if col in dt.columns:
-            dt[col] = dt[col].astype(str)
-
-    # Calculate score
-    submission = pd.DataFrame({
-        'score':  model.predict_proba(dt)[:, 1],
-        'fraud_flag': (model.predict_proba(dt)[:, 1] > model_th) * 1
-    })
-    logger.info(f'Prediction complete for data from {source_info}')
-
-    # Return proba for positive class
-    return submission
+    def score(self, transaction):
+        from common.schema import transaction_payload
+        transaction_id, data = transaction_payload(transaction)
+        features = prepare_features([data])
+        score = float(self.model.predict_proba(features, task_type='CPU', thread_count=1)[0,1])
+        return {'transaction_id': transaction_id, 'score': score,
+                'fraud_flag': int(score >= self.threshold)}

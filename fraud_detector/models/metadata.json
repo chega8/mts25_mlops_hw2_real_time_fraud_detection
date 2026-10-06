@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "features": [
+    "hour",
+    "year",
+    "month",
+    "day_of_month",
+    "day_of_week",
+    "amount_log",
+    "population_city_log",
+    "distance_log",
+    "gender",
+    "merch",
+    "cat_id",
+    "one_city",
+    "us_state",
+    "jobs"
+  ],
+  "categories": [
+    "gender",
+    "merch",
+    "cat_id",
+    "one_city",
+    "us_state",
+    "jobs"
+  ],
+  "source": "competition_train_csv",
+  "dataset_sha256": "2fd291f0d66cbb1f3c3e442396f3725d4cbde650d5dd0c16322c5230d3776b99",
+  "model_sha256": "af5da2715285b11625e8797d3d655fa99e9c4352c4f5c55b2d1c6779dbc48c81",
+  "threshold": 0.9326304997285554,
+  "training_rows": 629143,
+  "validation_rows": 157288,
+  "training_fraud": 3665,
+  "validation_fraud": 839,
+  "temporal_boundary": "2019-12-13T07:25:00+00:00",
+  "trees": 217,
+  "metrics": {
+    "roc_auc": 0.9974655096908625,
+    "average_precision": 0.8281772706771089,
+    "precision": 0.7967171717171717,
+    "recall": 0.7520858164481525,
+    "f1": 0.773758430410791
+  },
+  "versions": {
+    "python": "3.9.6",
+    "catboost": "1.2.8",
+    "pandas": "2.3.1",
+    "numpy": "1.26.4"
+  },
+  "note": "Threshold and best iteration selected on the same temporal validation; no independent test labels.",
+  "training_parameters": {
+    "iterations": 250,
+    "depth": 6,
+    "learning_rate": 0.08,
+    "loss_function": "Logloss",
+    "eval_metric": "AUC",
+    "auto_class_weights": "Balanced",
+    "random_seed": 42,
+    "thread_count": 4,
+    "task_type": "CPU",
+    "allow_writing_files": false
+  }
+}

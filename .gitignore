@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.DS_Store
+catboost_info/
+data/
+train.csv
+test.csv
+sample_submition.csv
+.local/

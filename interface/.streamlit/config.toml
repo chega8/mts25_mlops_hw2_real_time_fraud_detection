@@ -1,2 +1,2 @@
 [server]
-maxUploadSize = 500  # Максимальный размер файла в MB
+maxUploadSize = 50

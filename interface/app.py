@@ -1,102 +1,57 @@
-import streamlit as st
+from pathlib import Path
+from datetime import datetime
+import numpy as np
 import pandas as pd
-from kafka import KafkaProducer
-import json
-import time
-import os
-import uuid
+import streamlit as st
+from common.csv_input import load_csv, messages
+from common.broker import producer, publish
+from common.database import results
 
-# Конфигурация Kafka
-KAFKA_CONFIG = {
-    "bootstrap_servers": os.getenv("KAFKA_BROKERS", "kafka:9092"),
-    "topic": os.getenv("KAFKA_TOPIC", "transactions")
-}
-
-def load_file(uploaded_file):
-    """Загрузка CSV файла в DataFrame"""
+st.set_page_config(page_title='Скоринг транзакций', layout='wide')
+st.title('Скоринг фродовых транзакций')
+send_tab, result_tab = st.tabs(['Отправить транзакции', 'Результаты'])
+with send_tab:
+    st.write('Модель обучена на train.csv соревнования. Здесь CSV имитирует поток транзакций Kafka.')
+    upload = st.file_uploader('Загрузите test.csv (читаются первые 10 000 строк)', type=['csv'])
+    example = st.selectbox('Встроенный CSV', ['test_sample.csv', 'results_demo.csv'])
+    raw = upload.getvalue() if upload else Path('examples', example).read_bytes()
     try:
-        return pd.read_csv(uploaded_file)
-    except Exception as e:
-        st.error(f"Ошибка загрузки файла: {str(e)}")
-        return None
-
-def send_to_kafka(df, topic, bootstrap_servers):
-    """Отправка данных в Kafka с уникальным ID транзакции"""
-    try:
-        producer = KafkaProducer(
-            bootstrap_servers=bootstrap_servers,
-            value_serializer=lambda v: json.dumps(v).encode("utf-8"),
-            security_protocol="PLAINTEXT"
-        )
-        
-        # Генерация уникальных ID для всех транзакций
-        df['transaction_id'] = [str(uuid.uuid4()) for _ in range(len(df))]
-        
-        progress_bar = st.progress(0)
-        total_rows = len(df)
-        
-        for idx, row in df.iterrows():
-            # Отправляем данные вместе с ID
-            producer.send(
-                topic, 
-                value={
-                    "transaction_id": row['transaction_id'],
-                    "data": row.drop('transaction_id').to_dict()
-                }
-            )
-            progress_bar.progress((idx + 1) / total_rows)
-            time.sleep(0.01)
-            
-        producer.flush()
-     
-        return True
-    except Exception as e:
-        st.error(f"Ошибка отправки данных: {str(e)}")
-        return False
-
-# Инициализация состояния
-if "uploaded_files" not in st.session_state:
-    st.session_state.uploaded_files = {}
-
-# Интерфейс
-st.title("📤 Отправка данных в Kafka")
-
-# Блок загрузки файлов
-uploaded_file = st.file_uploader(
-    "Загрузите CSV файл с транзакциями",
-    type=["csv"]
-)
-
-if uploaded_file and uploaded_file.name not in st.session_state.uploaded_files:
-    # Добавляем файл в состояние
-    st.session_state.uploaded_files[uploaded_file.name] = {
-        "status": "Загружен",
-        "df": load_file(uploaded_file)
-    }
-    st.success(f"Файл {uploaded_file.name} успешно загружен!")
-
-# Список загруженных файлов
-if st.session_state.uploaded_files:
-    st.subheader("🗂 Список загруженных файлов")
-    
-    for file_name, file_data in st.session_state.uploaded_files.items():
-        cols = st.columns([4, 2, 2])
-        
-        with cols[0]:
-            st.markdown(f"**Файл:** `{file_name}`")
-            st.markdown(f"**Статус:** `{file_data['status']}`")
-        
-        with cols[2]:
-            if st.button(f"Отправить {file_name}", key=f"send_{file_name}"):
-                if file_data["df"] is not None:
-                    with st.spinner("Отправка..."):
-                        success = send_to_kafka(
-                            file_data["df"],
-                            KAFKA_CONFIG["topic"],
-                            KAFKA_CONFIG["bootstrap_servers"]
-                        )
-                        if success:
-                            st.session_state.uploaded_files[file_name]["status"] = "Отправлен"
-                            st.rerun()
-                else:
-                    st.error("Файл не содержит данных")
+        frame = load_csv(raw)
+        st.dataframe(frame.head(10), hide_index=True)
+        count = st.number_input('Количество транзакций', min_value=1, max_value=len(frame), value=min(100,len(frame)))
+        if st.button('Отправить в Kafka'):
+            sent = 0
+            try:
+                batch = messages(frame.iloc[:int(count)], raw)
+                client = producer()
+                progress = st.progress(0)
+                for item in batch:
+                    publish(client, 'transactions', item, item['transaction_id'])
+                    sent += 1
+                    progress.progress(sent / len(batch))
+                st.success(f'Kafka приняла {sent} сообщений. Откройте результаты после обработки.')
+            except Exception as error:
+                st.error(f'Подтверждено сообщений: {sent}. Ошибка: {error}')
+    except Exception as error:
+        st.error(f'Ошибка CSV: {error}')
+with result_tab:
+    if st.button('Посмотреть результаты'):
+        try:
+            st.session_state['results'] = (*results(), datetime.now().isoformat(timespec='seconds'))
+        except Exception as error:
+            st.error(f'Не удалось прочитать PostgreSQL: {error}')
+    if 'results' in st.session_state:
+        fraud, scores, total, timestamp = st.session_state['results']
+        st.caption(f'Обновлено: {timestamp}. Всего записей: {total}')
+        st.subheader('10 последних транзакций с fraud_flag = 1')
+        if fraud:
+            st.dataframe(pd.DataFrame(fraud, columns=['transaction_id','score','fraud_flag','created_at']), hide_index=True)
+        else:
+            st.info('Фродовых транзакций пока нет.')
+        st.subheader(f'Распределение скоров последних {len(scores)} транзакций')
+        if scores:
+            counts, edges = np.histogram(scores, bins=np.linspace(0,1,11))
+            labels = [f'{edges[i]:.1f}–{edges[i+1]:.1f}' for i in range(10)]
+            st.bar_chart(pd.DataFrame({'Число транзакций':counts}, index=labels))
+        else:
+            st.info('Результатов пока нет.')

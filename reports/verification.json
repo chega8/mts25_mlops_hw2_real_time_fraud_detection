@@ -1,0 +1,69 @@
+{
+  "docker_smoke_test": "passed",
+  "live_streamlit_results_button": "passed",
+  "total_database_records": 122,
+  "latest_fraud_rows": 10,
+  "histogram_rows": 100,
+  "container_versions": {
+    "python": "3.12.15",
+    "catboost": "1.2.8",
+    "numpy": "2.2.6",
+    "pandas": "2.2.3"
+  },
+  "latest_fraud_records": [
+    {
+      "transaction_id": "3ed8b8a1-d84a-5a58-a8e7-be689d9dbb14",
+      "score": 0.9999978695447462,
+      "fraud_flag": 1
+    },
+    {
+      "transaction_id": "daceaa56-b47d-5297-96f8-d0da5c676ac2",
+      "score": 0.9999978331816182,
+      "fraud_flag": 1
+    },
+    {
+      "transaction_id": "ddabb070-3c1f-523f-9332-2c9f2c30f8c2",
+      "score": 0.9999977922533791,
+      "fraud_flag": 1
+    },
+    {
+      "transaction_id": "f2ba766f-eb63-5370-a710-c02281798256",
+      "score": 0.9999976834481794,
+      "fraud_flag": 1
+    },
+    {
+      "transaction_id": "7c95d03a-51a2-541c-8538-41963173257a",
+      "score": 0.9999973750368305,
+      "fraud_flag": 1
+    },
+    {
+      "transaction_id": "04af9710-13ee-5acf-b99c-fff6b1c32928",
+      "score": 0.9999970048869485,
+      "fraud_flag": 1
+    },
+    {
+      "transaction_id": "64d761d5-7d49-5fc3-a993-283fd32be588",
+      "score": 0.9999969020316135,
+      "fraud_flag": 1
+    },
+    {
+      "transaction_id": "c5fbad1f-2f50-503d-87a7-1b89664786a1",
+      "score": 0.9999968835123051,
+      "fraud_flag": 1
+    },
+    {
+      "transaction_id": "a97d26c9-88aa-57d7-b15d-12269b192e87",
+      "score": 0.9999968633386703,
+      "fraud_flag": 1
+    },
+    {
+      "transaction_id": "db28bd9d-5d94-51b7-8801-fff3b0684ba7",
+      "score": 0.9999967403214605,
+      "fraud_flag": 1
+    }
+  ],
+  "local_unit_tests": {
+    "passed": 16
+  },
+  "full_test_csv_scored": 262144
+}

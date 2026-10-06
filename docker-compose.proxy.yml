@@ -1,0 +1,13 @@
+services:
+  fraud_detector:
+    build:
+      secrets: [build_ca]
+  result_writer:
+    build:
+      secrets: [build_ca]
+  interface:
+    build:
+      secrets: [build_ca]
+secrets:
+  build_ca:
+    file: ${BUILD_CA_FILE:-.local/build-ca.pem}

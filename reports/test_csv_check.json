@@ -1,0 +1,29 @@
+{
+  "test_rows": 262144,
+  "successfully_scored": 262144,
+  "fraud_flags": 1513,
+  "min_score": 4.551380396676583e-07,
+  "max_score": 0.9999978695447462,
+  "threshold": 0.9326304997285554,
+  "test_sha256": "4129db5d9079f907d9a38aefc170f5e105a650a8273457aaae02a1f735516eac",
+  "missing_values_by_column": {
+    "transaction_time": 0,
+    "merch": 0,
+    "cat_id": 0,
+    "amount": 0,
+    "name_1": 0,
+    "name_2": 0,
+    "gender": 0,
+    "street": 0,
+    "one_city": 0,
+    "us_state": 0,
+    "post_code": 0,
+    "lat": 0,
+    "lon": 0,
+    "population_city": 0,
+    "jobs": 0,
+    "merchant_lat": 0,
+    "merchant_lon": 0
+  },
+  "note": "Offline compatibility/inference check; no test labels or Kafka/PostgreSQL used."
+}
